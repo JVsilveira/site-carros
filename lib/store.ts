@@ -1,7 +1,7 @@
-import { env } from 'cloudflare:workers';
+import { workerEnv as env } from './worker-env';
 import type { Vehicle, StoreSettings } from './models';
 import usedVehicles from './demo-used-vehicles.json';
-export function db() { if(!env.DB) throw new Error('Estoque indisponível'); return env.DB; }
+export function db() { if(!env.DB) throw new Error('Estoque indisponível'); return env.DB as D1Database; }
 export async function listVehicles():Promise<Vehicle[]> { await seedExamples(); await seedUsedVehicles(); const r=await db().prepare('SELECT id, data FROM vehicles ORDER BY created_at DESC').all<{id:string;data:string}>();return r.results.map(r=>({...JSON.parse(r.data),id:r.id})); }
 export async function getSettings():Promise<StoreSettings> {const r=await db().prepare('SELECT data FROM settings WHERE id = ?').bind('store').first<{data:string}>();return r?JSON.parse(r.data):{name:'Linha Motors',whatsapp:'',email:'',address:''};}
 export function adminEmail(){return ((env as unknown as Record<string,string>).ADMIN_EMAIL||'').toLowerCase().trim();}

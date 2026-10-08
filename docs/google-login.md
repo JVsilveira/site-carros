@@ -1,6 +1,6 @@
 # Login administrativo com Google
 
-O catálogo (`/`), as fichas (`/veiculos/:id`) e a consulta do estoque (`GET /api/vehicles`) não exigem login. Somente `/admin` e as gravações exigem uma sessão Google administrativa. O acesso público da hospedagem também precisa estar em `public`.
+O catálogo (`/`), as fichas (`/veiculos/:id`) e a consulta do estoque (`GET /api/vehicles`) não exigem login. Somente `/admin` e as gravações exigem uma sessão Google administrativa.
 
 ## Configuração no Google
 
@@ -8,17 +8,17 @@ O catálogo (`/`), as fichas (`/veiculos/:id`) e a consulta do estoque (`GET /ap
 2. Configure a tela de consentimento. Em modo de teste, inclua `joaovitor.santossilveira@gmail.com` entre os usuários de teste.
 3. Adicione em **Origens JavaScript autorizadas**:
    - `http://localhost`
-   - `http://localhost:4173`
-   - `https://linha-motors.joaovitor-santossilv.chatgpt.site`
+   - `http://localhost:5173`
+   - a URL HTTPS `workers.dev` retornada pelo seu deploy
 4. Copie o Client ID terminado em `.apps.googleusercontent.com`. Este fluxo usa o botão Google Identity Services com callback JavaScript; não necessita de Client Secret ou URI de redirecionamento.
 
-Se o Google exigir domínio verificado para publicar a tela de consentimento, use um domínio próprio que você possa verificar. Não declare propriedade de `chatgpt.site`. Para desenvolvimento, use localhost e uma aplicação Google em modo de teste.
+Se o Google exigir domínio verificado para publicar a tela de consentimento, use um domínio próprio que você possa verificar.  Para desenvolvimento, use localhost e uma aplicação Google em modo de teste.
 
 Referências oficiais: [configuração](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid), [validação dos tokens](https://developers.google.com/identity/gsi/web/guides/verify-google-id-token).
 
 ## Ambiente local
 
-Copie `.env.example` para `.env` e configure:
+Crie `.dev.vars` localmente (arquivo ignorado pelo Git) e configure:
 
 - `ADMIN_EMAIL`: e-mail Google autorizado a administrar a loja.
 - `GOOGLE_CLIENT_ID`: Client ID público do aplicativo Web.
@@ -27,15 +27,15 @@ Copie `.env.example` para `.env` e configure:
 Inicie usando o caminho absoluto do arquivo de ambiente:
 
 ```sh
-npm run build
-npm start -- --port 4173 --env-file /mnt/hd/Projetos/venda-de-carros/showroom/.env
+npm run db:local
+npm run dev
 ```
 
 Se mudar a porta, autorize essa origem no Google também. Abra pelo hostname `localhost` configurado no Google.
 
 ## Hospedagem
 
-As mesmas três variáveis devem existir na configuração de ambiente do Sites. `SESSION_SECRET` é um segredo; o Client ID é público. Publicar uma versão aplica a configuração de ambiente. Nenhuma credencial é guardada em `.openai/hosting.json`.
+Configure as três variáveis no Worker da sua conta Cloudflare usando `wrangler secret put` ou o painel. `SESSION_SECRET` é um segredo; o Client ID é público. Nenhuma credencial deve ser incluída em `wrangler.jsonc` ou no Git.
 
 ## Sessões e permissões
 

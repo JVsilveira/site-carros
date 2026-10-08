@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "linha-motors",
+  "main": "build/worker.ts",
+  "compatibility_date": "2026-05-15",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "workers_dev": true,
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "linha-motors",
+      "database_id": "a6386a45-24dc-4caf-a1f9-184b83b6033e",
+      "migrations_dir": "drizzle"
+    }
+  ],
+  "account_id": "ac2483adaf37ac4c21e727a4638b3beb"
+}

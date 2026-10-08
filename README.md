@@ -1,31 +1,50 @@
 # Linha Motors
 
-Site de revenda com catálogo, busca, filtros, detalhes, galeria e administração protegida.
+Site de revenda com catálogo público, busca, filtros, fichas, galeria e administração com Google. React/TypeScript, Vinext/Vite e Cloudflare Workers/D1.
 
-## Desenvolvimento
+## Rodar localmente
+
+Requer Node.js 22.13 ou superior.
 
 ```sh
-npm run install:ci
-npm run db:generate
-npm run build
+npm ci
+npm run db:local
+npm run dev
 ```
 
-Aplique as migrations em D1 local conforme os comandos em `docs/validation.md`. Inicie com `npm start`. O catálogo e os detalhes são públicos; somente a administração exige login com Google.
+Abra http://localhost:5173. O D1 local é separado do banco hospedado. Os 23 veículos demonstrativos são inseridos uma vez; anúncios removidos não reaparecem.
 
-## Google e administração
+Para configurar a administração, crie um arquivo **local e ignorado** `.dev.vars` com `ADMIN_EMAIL`, `GOOGLE_CLIENT_ID` e `SESSION_SECRET` (pelo menos 32 caracteres). Veja [login Google](docs/google-login.md).
 
-Siga [docs/google-login.md](docs/google-login.md). Configure `ADMIN_EMAIL`, `GOOGLE_CLIENT_ID` e `SESSION_SECRET` no ambiente do Worker. O servidor valida a assinatura do token Google, emissor, público-alvo, expiração, nonce e e-mail verificado. Somente o e-mail em `ADMIN_EMAIL` recebe uma sessão administrativa. Cabeçalhos de identidade do ChatGPT não concedem acesso.
+## Publicar na Cloudflare
 
-Dados de veículos e configurações ficam em D1. Três exemplos são inseridos apenas na primeira leitura; a marca de inicialização impede que veículos removidos reapareçam. Fotos de anúncios reais aceitam até 12 URLs HTTPS. O WhatsApp é opcional e configurável na administração; sem número, a interface informa que o contato estará disponível em breve.
+O GitHub Pages hospeda apenas arquivos estáticos e não executa este sistema, que precisa de servidor e banco de dados. O workflow anterior de Pages foi removido. A aplicação não depende de Sites, `.openai` ou domínio ChatGPT.
 
-## Fotos demonstrativas
+```sh
+npx wrangler login
+npx wrangler d1 create linha-motors
+```
+
+Copie o `database_id` retornado para o binding `DB` em `wrangler.jsonc`. O ID é um identificador público do recurso, não um segredo; o ID de exemplo serve somente para desenvolvimento local. Use um banco novo na sua conta, sem reaproveitar recursos do Sites.
+
+```sh
+npm run db:remote
+npx wrangler secret put ADMIN_EMAIL
+npx wrangler secret put GOOGLE_CLIENT_ID
+npx wrangler secret put SESSION_SECRET
+npm run deploy
+```
+
+O comando de deploy gera o build e publica `dist/server/wrangler.json`. Não publique só `dist/client`: as rotas dependem do Worker. A Cloudflare informa o endereço `workers.dev` real ao final. Não é necessário domínio comprado. Autorize essa origem no cliente Google. Sem configuração Google válida, o catálogo fica aberto e a administração permanece bloqueada.
+
+Para publicar a partir do GitHub, conecte este repositório em **Cloudflare > Workers & Pages > Create > Import a repository**. Configure o build `npm run build` e o deploy `npx wrangler deploy --config dist/server/wrangler.json`; configure o binding D1 e as três variáveis na Cloudflare. Aplique as migrations antes da primeira publicação. Segredos ficam exclusivamente no ambiente, nunca no Git.
+
+## Fotos e dados
+
+Valores, quilometragens, equipamentos e imagens dos 23 anúncios são demonstrativos. O lote de usados está em `lib/demo-used-vehicles.json`; suas licenças e fontes estão em [créditos](public/stock/credits.html). Fotos podem representar outra versão, ano ou cor.
 
 - BMW: Patrick Tomasso — https://unsplash.com/photos/white-bmw-car-CP1cKFIl7qc
 - Audi A6: Seifeddine Dridi — https://unsplash.com/photos/black-audi-vehicle-X82zIlot6zU
 - Audi R8: Conor Samuel — https://unsplash.com/photos/black-audi-car-aIbR-deTiWY
 
-Fotos sob a licença Unsplash. Valores e especificações são ilustrativos.
-
-## Estoque usado demonstrativo
-
-O lote `lib/demo-used-vehicles.json` acrescenta 20 anúncios (14 hatches e 6 picapes) uma única vez, com marca persistente em D1. Releituras não duplicam o lote nem recriam anúncios removidos. Fotos por modelo em `public/stock/`, com autores, fontes e licenças em `public/stock/credits.html`. Fotos podem representar outra versão, ano ou cor, como informado nas fichas.
+As três fotos acima seguem a licença Unsplash.

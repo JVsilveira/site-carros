@@ -19,10 +19,17 @@
 
 ## Banco local
 
-Após gerar o build, aplique cada migration ainda pendente usando o nome exato:
-
 ```sh
-node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_curvy_white_tiger.sql
+npm run db:local
 ```
 
-Não reaplique migrations já executadas. A publicação gerencia o banco hospedado separadamente.
+O Wrangler aplica somente migrations pendentes no D1 local. Para um banco remoto novo e configurado na sua conta Cloudflare, use `npm run db:remote` antes da primeira publicação.
+
+## Hospedagem independente — 08/10/2026
+
+- Puxada a versão `986591a` do GitHub. Confirmado 404 no Pages: workflow publicou a raiz sem index.html e sem build; o aplicativo exige Worker/D1.
+- Removido o workflow de Pages e os plugins de hospedagem do Sites do build. Configuração independente em wrangler.jsonc, Worker padrão do Vinext e scripts de deploy direto.
+- TypeScript, ESLint (sem erros; seis avisos existentes), build de produção e migrations locais aprovados.
+- Catálogo com 23 veículos, detalhe, administração pública de login, créditos e imagem retornaram 200 em Worker local. Rota inexistente retornou 404; gravação sem sessão retornou 403; leituras repetidas preservaram a quantidade.
+- Banco remoto novo criado na conta Cloudflare do proprietário, separado do Sites; transferência dos 23 registros e marcas de inicialização preservadas.
+- Login Google real ainda depende do Client ID e de autorizar a origem nova no Google.
