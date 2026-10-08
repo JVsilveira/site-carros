@@ -1,0 +1,2 @@
+import { db } from '@/lib/store';import { guard } from '@/lib/auth';
+export async function DELETE(request:Request,{params}:{params:Promise<{id:string}>}){const denied=await guard(request);if(denied)return denied;try{const {id}=await params;const r=await db().prepare('DELETE FROM vehicles WHERE id = ?').bind(id).run();if(!r.meta.changes)return Response.json({error:'Veículo não encontrado.'},{status:404});return new Response(null,{status:204});}catch{return Response.json({error:'Não foi possível remover. Tente novamente.'},{status:503});}}

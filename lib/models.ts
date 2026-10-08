@@ -1,0 +1,5 @@
+import { z } from 'zod';
+export const vehicleSchema = z.object({ id:z.string().optional(), brand:z.string().trim().min(1).max(40), model:z.string().trim().min(1).max(80), version:z.string().trim().max(100), year:z.number().int().min(1950).max(2028), price:z.number().positive().max(100000000), km:z.number().int().min(0).max(3000000), category:z.enum(['Sedã','SUV','Hatch','Picape','Esportivo']), transmission:z.enum(['Automático','Manual']), fuel:z.enum(['Flex','Gasolina','Diesel','Elétrico','Híbrido']), color:z.string().trim().min(1).max(40), description:z.string().trim().max(3000), features:z.string().max(1500), photos:z.array(z.string().url().refine(v=>v.startsWith('https://'),'Use uma URL HTTPS')).min(1).max(12), demo:z.boolean().optional() });
+export type Vehicle = z.infer<typeof vehicleSchema> & { id:string };
+export type StoreSettings = { name:string; whatsapp:string; email:string; address:string };
+export const money=(n:number)=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0}).format(n);

@@ -1,0 +1,2 @@
+ 'use client';import {useState} from 'react';
+export default function Gallery({photos,name}:{photos:string[];name:string}){const [index,setIndex]=useState(0);return <div className="gallery"><div className="gallery-main"><img src={photos[index]} alt={`${name}, foto ${index+1}`}/><span>{index+1} / {photos.length}</span></div>{photos.length>1&&<div className="thumbnails">{photos.map((url,i)=><button key={i} aria-label={`Ver foto ${i+1}`} aria-pressed={i===index} onClick={()=>setIndex(i)}><img src={url} alt=""/></button>)}</div>}</div>;}

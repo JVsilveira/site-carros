@@ -1,0 +1,382 @@
+[
+  {
+    "id": "demo-usados-polo-2018",
+    "brand": "Volkswagen",
+    "model": "Polo",
+    "version": "1.0 MPI",
+    "year": 2018,
+    "color": "Branco",
+    "price": 67900,
+    "km": 82500,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/polo-white.jpg"
+    ],
+    "demo": true,
+    "description": "Volkswagen Polo 2018, branco, com câmbio manual e 82.500 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-polo-2021",
+    "brand": "Volkswagen",
+    "model": "Polo",
+    "version": "1.0 TSI Comfortline",
+    "year": 2021,
+    "color": "Prata",
+    "price": 80900,
+    "km": 48200,
+    "category": "Hatch",
+    "transmission": "Automático",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/polo.jpg"
+    ],
+    "demo": true,
+    "description": "Volkswagen Polo 2021, prata, com câmbio automático e 48.200 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-onix-2015",
+    "brand": "Chevrolet",
+    "model": "Onix",
+    "version": "1.0 LT",
+    "year": 2015,
+    "color": "Branco",
+    "price": 44900,
+    "km": 128000,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/onix.jpg"
+    ],
+    "demo": true,
+    "description": "Chevrolet Onix 2015, branco, com câmbio manual e 128.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-onix-2018",
+    "brand": "Chevrolet",
+    "model": "Onix",
+    "version": "1.4 LTZ",
+    "year": 2018,
+    "color": "Preto",
+    "price": 58900,
+    "km": 86500,
+    "category": "Hatch",
+    "transmission": "Automático",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/onix-black.jpg"
+    ],
+    "demo": true,
+    "description": "Chevrolet Onix 2018, preto, com câmbio automático e 86.500 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-onix-2022",
+    "brand": "Chevrolet",
+    "model": "Onix",
+    "version": "1.0 Turbo LT",
+    "year": 2022,
+    "color": "Vermelho",
+    "price": 82900,
+    "km": 36700,
+    "category": "Hatch",
+    "transmission": "Automático",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/onix-red.jpg"
+    ],
+    "demo": true,
+    "description": "Chevrolet Onix 2022, vermelho, com câmbio automático e 36.700 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-hb20-2017",
+    "brand": "Hyundai",
+    "model": "HB20",
+    "version": "1.0 Comfort",
+    "year": 2017,
+    "color": "Prata",
+    "price": 52900,
+    "km": 97200,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/hb20.png"
+    ],
+    "demo": true,
+    "description": "Hyundai HB20 2017, prata, com câmbio manual e 97.200 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-hb20-2023",
+    "brand": "Hyundai",
+    "model": "HB20",
+    "version": "1.0 Comfort",
+    "year": 2023,
+    "color": "Azul",
+    "price": 89900,
+    "km": 28500,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/hb20.png"
+    ],
+    "demo": true,
+    "description": "Hyundai HB20 2023, azul, com câmbio manual e 28.500 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-gol-2014",
+    "brand": "Volkswagen",
+    "model": "Gol",
+    "version": "1.0 Trend",
+    "year": 2014,
+    "color": "Branco",
+    "price": 37900,
+    "km": 142000,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/gol.jpg"
+    ],
+    "demo": true,
+    "description": "Volkswagen Gol 2014, branco, com câmbio manual e 142.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-gol-2019",
+    "brand": "Volkswagen",
+    "model": "Gol",
+    "version": "1.6 MSI",
+    "year": 2019,
+    "color": "Vermelho",
+    "price": 54900,
+    "km": 71300,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/gol.jpg"
+    ],
+    "demo": true,
+    "description": "Volkswagen Gol 2019, vermelho, com câmbio manual e 71.300 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-palio-2012",
+    "brand": "Fiat",
+    "model": "Palio",
+    "version": "1.0 Fire Economy",
+    "year": 2012,
+    "color": "Prata",
+    "price": 29900,
+    "km": 156000,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/palio.jpg"
+    ],
+    "demo": true,
+    "description": "Fiat Palio 2012, prata, com câmbio manual e 156.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-palio-2016",
+    "brand": "Fiat",
+    "model": "Palio",
+    "version": "1.0 Attractive",
+    "year": 2016,
+    "color": "Preto",
+    "price": 41900,
+    "km": 108500,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/palio-black.jpg"
+    ],
+    "demo": true,
+    "description": "Fiat Palio 2016, preto, com câmbio manual e 108.500 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-sandero-2016",
+    "brand": "Renault",
+    "model": "Sandero",
+    "version": "1.0 Expression",
+    "year": 2016,
+    "color": "Branco",
+    "price": 42900,
+    "km": 114000,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/sandero.png"
+    ],
+    "demo": true,
+    "description": "Renault Sandero 2016, branco, com câmbio manual e 114.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-sandero-2020",
+    "brand": "Renault",
+    "model": "Sandero",
+    "version": "1.0 Life",
+    "year": 2020,
+    "color": "Cinza",
+    "price": 59900,
+    "km": 62400,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/sandero.png"
+    ],
+    "demo": true,
+    "description": "Renault Sandero 2020, cinza, com câmbio manual e 62.400 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-kwid-2021",
+    "brand": "Renault",
+    "model": "Kwid",
+    "version": "1.0 Zen",
+    "year": 2021,
+    "color": "Laranja",
+    "price": 46900,
+    "km": 45700,
+    "category": "Hatch",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/kwid.jpg"
+    ],
+    "demo": true,
+    "description": "Renault Kwid 2021, laranja, com câmbio manual e 45.700 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-strada-2014",
+    "brand": "Fiat",
+    "model": "Strada",
+    "version": "1.4 Working · Cabine simples",
+    "year": 2014,
+    "color": "Prata",
+    "price": 44900,
+    "km": 138000,
+    "category": "Picape",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/strada.jpg"
+    ],
+    "demo": true,
+    "description": "Fiat Strada 2014, prata, com câmbio manual e 138.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-strada-2022",
+    "brand": "Fiat",
+    "model": "Strada",
+    "version": "1.3 Freedom · Cabine dupla",
+    "year": 2022,
+    "color": "Branco",
+    "price": 89900,
+    "km": 39200,
+    "category": "Picape",
+    "transmission": "Manual",
+    "fuel": "Flex",
+    "photos": [
+      "/stock/strada-new.jpg"
+    ],
+    "demo": true,
+    "description": "Fiat Strada 2022, branco, com câmbio manual e 39.200 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos"
+  },
+  {
+    "id": "demo-usados-hilux-2016",
+    "brand": "Toyota",
+    "model": "Hilux",
+    "version": "2.8 SR · 4x4 · Cabine dupla",
+    "year": 2016,
+    "color": "Branco",
+    "price": 159900,
+    "km": 164000,
+    "category": "Picape",
+    "transmission": "Automático",
+    "fuel": "Diesel",
+    "photos": [
+      "/stock/hilux-white.jpg"
+    ],
+    "demo": true,
+    "description": "Toyota Hilux 2016, branco, com câmbio automático e 164.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos, Tração 4x4"
+  },
+  {
+    "id": "demo-usados-hilux-2020",
+    "brand": "Toyota",
+    "model": "Hilux",
+    "version": "2.8 SRV · 4x4 · Cabine dupla",
+    "year": 2020,
+    "color": "Preto",
+    "price": 229900,
+    "km": 83200,
+    "category": "Picape",
+    "transmission": "Automático",
+    "fuel": "Diesel",
+    "photos": [
+      "/stock/hilux-black.jpg"
+    ],
+    "demo": true,
+    "description": "Toyota Hilux 2020, preto, com câmbio automático e 83.200 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos, Tração 4x4"
+  },
+  {
+    "id": "demo-usados-s10-2015",
+    "brand": "Chevrolet",
+    "model": "S10",
+    "version": "2.8 LT · 4x4 · Cabine dupla",
+    "year": 2015,
+    "color": "Prata",
+    "price": 129900,
+    "km": 151000,
+    "category": "Picape",
+    "transmission": "Manual",
+    "fuel": "Diesel",
+    "photos": [
+      "/stock/s10.jpg"
+    ],
+    "demo": true,
+    "description": "Chevrolet S10 2015, prata, com câmbio manual e 151.000 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos, Tração 4x4"
+  },
+  {
+    "id": "demo-usados-s10-2019",
+    "brand": "Chevrolet",
+    "model": "S10",
+    "version": "2.8 LTZ · 4x4 · Cabine dupla",
+    "year": 2019,
+    "color": "Cinza",
+    "price": 179900,
+    "km": 97800,
+    "category": "Picape",
+    "transmission": "Automático",
+    "fuel": "Diesel",
+    "photos": [
+      "/stock/s10.jpg"
+    ],
+    "demo": true,
+    "description": "Chevrolet S10 2019, cinza, com câmbio automático e 97.800 km. Anúncio demonstrativo de veículo usado. Preço, quilometragem e equipamentos são dados de exemplo. A foto é ilustrativa do modelo e pode representar outra versão, ano ou cor.",
+    "features": "Ar-condicionado, Direção assistida, Vidros elétricos, Tração 4x4"
+  }
+]
